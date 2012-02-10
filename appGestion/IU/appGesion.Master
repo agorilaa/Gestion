@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="appGesion.master.cs" Inherits="appGestion.IU.appGesion" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Aplicación de gestión</title>
+    <meta content="utf-8" />
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/960.css" />
+	<link rel="stylesheet" href="css/text.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+        });
+    </script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="wrap container_12">
+	<header class="grid_12">
+		<h1 class="grid_9">Nombre APP</h1>
+        <asp:Label ID="nomUsu" runat="server" Text="Nombre de usuario" CssClass="grid_2"></asp:Label>
+	    <asp:Label ID="fecha" runat="server" CssClass="grid_2"></asp:Label>
+		<form runat="server" CssClass="grid_1">
+            <asp:Button ID="salir" runat="server" Text="Salir" class="grid_1"></asp:Button>
+        </form>
+	</header>
+	<div class="main grid_12">
+        <div class="content grid_9 alpha">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <aside class="grid_3 omega">
+		<h2>Menu</h2>
+		<ul>
+			<li><a href="#">Empresa</a></li>
+			<li><a href="#">Oferta</a></li>
+			<li><a href="#">Baja</a></li>
+			<li><a href="#">Inicio</a></li>
+		</ul>
+	</aside>
+	</div>
+	
+	<footer class="grid_12">
+		<p>Soy el footer</p>
+	</footer>
+</div>
+</body>
+</html>

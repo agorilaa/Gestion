@@ -1,0 +1,51 @@
+*{
+	-moz-box-sizing:border-box;			/*hace que el padding no se añada al width*/
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.wrap{
+	background-color:#B6D5E9;
+	padding: 5px 0px;
+}
+header{
+	background-color:#63829E;
+	padding:20px 20px;
+}
+aside{
+	background-color:#6EAACF;
+}
+
+.content{
+	background-color:#6EAACF;
+}
+footer{
+	background-color:#63829E;	
+}
+header, .main, footer{
+	margin-top:2.5px;
+	margin-bottom:2.5px;
+}
+.content, aside, footer{
+	padding: 10px;
+}
+h1,h2{
+	color:white;
+	text-align:center;
+}
+ul{
+	list-style:none;
+}
+a:link{
+	color: #246287;
+	text-decoration:none;
+}
+a:hover{
+	color: #246287;
+	font-weight:bold;
+}
+a:visited{
+	color: #246287;
+}
+aside li{
+	border: 2px solid;
+}
