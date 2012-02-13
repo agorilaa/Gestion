@@ -78,6 +78,7 @@
     <Compile Include="BBL\Potenciales.cs" />
     <Compile Include="BBL\Servicios.cs" />
     <Compile Include="BBL\Tlfemp.cs" />
+    <Compile Include="DAL\BaseDatos.cs" />
     <Compile Include="IU\appGesion.Master.cs">
       <DependentUpon>appGesion.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -102,7 +103,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAL\" />
     <Folder Include="IU\img\" />
   </ItemGroup>
   <ItemGroup>

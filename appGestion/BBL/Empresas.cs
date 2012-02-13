@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using appGestion.DAL;
 
 namespace appGestion.BBL
 {
@@ -78,6 +79,13 @@ namespace appGestion.BBL
             this.ciudad = vciudad;
             this.nEmp = vnEmp;
             this.tipo = vtipo;
+        }
+        public void verEmpre()
+        {
+            BaseDatos bd = new BaseDatos();
+            bd.abrirConexion();
+            bd.queryBdReader("select nombre form comerciales", nombre);
+            bd.cerrarConexion();
         }
     }
 }
