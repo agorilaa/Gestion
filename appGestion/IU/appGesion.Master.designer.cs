@@ -13,13 +13,13 @@ namespace appGestion.IU {
     public partial class appGesion {
         
         /// <summary>
-        /// head control.
+        /// formMaster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlForm formMaster;
         
         /// <summary>
         /// nomUsu control.
@@ -49,12 +49,12 @@ namespace appGestion.IU {
         protected global::System.Web.UI.WebControls.Button salir;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// contenido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder contenido;
     }
 }

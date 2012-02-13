@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using appGestion.DAL;
+using System.Data;
+using System.Data.Odbc;
 
 namespace appGestion.BBL
 {
@@ -80,12 +82,12 @@ namespace appGestion.BBL
             this.nEmp = vnEmp;
             this.tipo = vtipo;
         }
-        public void verEmpre()
+        public static DataTable listarEmpresas(string query)
         {
             BaseDatos bd = new BaseDatos();
             bd.abrirConexion();
-            bd.queryBdReader("select nombre form comerciales", nombre);
-            bd.cerrarConexion();
+            return bd.executeReader(query);
         }
+
     }
 }

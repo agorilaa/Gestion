@@ -5,25 +5,12 @@ using System.Web;
 
 namespace appGestion.BBL
 {
-    public class Firmes
+    public class Firmes:Empresas
     {
-        private string cif;
-
-        public string Cif
-        {
-            get
-            {
-                return this.cif;
-            }
-            set
-            {
-                this.cif = value;
-            }
-        }
         //Métodos
-        public Firmes(string vcif)
+        public Firmes(string vcif, string vnombre, string vciudad, int vnEmp, string vtipo):base(vcif, vnombre, vciudad, vnEmp, vtipo)
         {
-            this.cif = vcif;
+            
         }
     }
 }

@@ -17,24 +17,20 @@
             
         });
     </script>
-    
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
 </head>
 <body>
+    <form id="formMaster" runat="server">
     <div class="wrap container_12">
 	<header class="grid_12">
 		<h1 class="grid_9">Nombre APP</h1>
         <asp:Label ID="nomUsu" runat="server" Text="Nombre de usuario" CssClass="grid_2"></asp:Label>
 	    <asp:Label ID="fecha" runat="server" CssClass="grid_2"></asp:Label>
-		<form runat="server" CssClass="grid_1">
-            <asp:Button ID="salir" runat="server" Text="Salir" class="grid_1"></asp:Button>
-        </form>
+        <asp:Button ID="salir" runat="server" Text="Salir" class="grid_1"></asp:Button>
 	</header>
 	<div class="main grid_12">
         <div class="content grid_9 alpha">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
+            <asp:ContentPlaceHolder ID="contenido" runat="server">
+                
             </asp:ContentPlaceHolder>
         </div>
         <aside class="grid_3 omega">
@@ -51,6 +47,7 @@
 	<footer class="grid_12">
 		<p>Soy el footer</p>
 	</footer>
-</div>
+    </div>
+    </form>
 </body>
 </html>

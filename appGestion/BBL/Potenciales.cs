@@ -5,22 +5,10 @@ using System.Web;
 
 namespace appGestion.BBL
 {
-    public class Potenciales
+    public class Potenciales:Empresas
     {
-        private string cif;
         private string sector;
 
-        public string Cif
-        {
-            get 
-            {
-                return this.cif;
-            }
-            set
-            {
-                this.cif = value;
-            }
-        }
         public string Sector
         {
             get
@@ -33,9 +21,9 @@ namespace appGestion.BBL
             }
         }
         //Métodos
-        public Potenciales(string vcif, string vsector)
+        public Potenciales(string vsector, string vcif, string vnombre, string vciudad, int vnEmp, string vtipo)
+            : base(vcif, vnombre, vciudad, vnEmp, vtipo)
         {
-            this.cif = vcif;
             this.sector = vsector;
         }
     }

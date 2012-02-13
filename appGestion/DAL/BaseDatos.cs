@@ -13,6 +13,7 @@ namespace appGestion.DAL
         private OdbcCommand comd;
         private OdbcDataReader dataReader;
         private OdbcDataAdapter dataAdapter;
+        private DataTable dt;
 
         public OdbcConnection Conex
         {
@@ -63,18 +64,13 @@ namespace appGestion.DAL
         {
             this.conex = new OdbcConnection("DSN=gloria");
             this.conex.Open();
-            this.comd = new OdbcCommand();
-            this.comd.Connection=conex;
         }
-        public void queryBdReader(string query, string col1)        //Para sólo una columna
+        public DataTable executeReader(string query)        //Para sólo una columna
         {
-            this.comd.CommandText = query;
-            this.dataReader = this.comd.ExecuteReader();
-            while (DataReader.Read())
-            { 
-                Console.WriteLine(this.dataReader[col1]);
-            }
-            
+            this.dataAdapter = new OdbcDataAdapter(query, conex);
+            this.dt = new DataTable();
+            this.dataAdapter.Fill(dt);
+            return this.dt;
         }
 
 
