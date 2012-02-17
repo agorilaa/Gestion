@@ -10,87 +10,114 @@
 namespace appGestion.IU {
     
     
-    public partial class appGesion {
+    public partial class WebForm3 {
         
         /// <summary>
-        /// formMaster control.
+        /// cif control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formMaster;
+        protected global::System.Web.UI.WebControls.Label cif;
         
         /// <summary>
-        /// nomUsu control.
+        /// cifBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label nomUsu;
+        protected global::System.Web.UI.WebControls.TextBox cifBox;
         
         /// <summary>
-        /// fecha control.
+        /// nomEmp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label fecha;
+        protected global::System.Web.UI.WebControls.Label nomEmp;
         
         /// <summary>
-        /// salir control.
+        /// nomEmpBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button salir;
+        protected global::System.Web.UI.WebControls.TextBox nomEmpBox;
         
         /// <summary>
-        /// Menu1 control.
+        /// ciudad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu1;
+        protected global::System.Web.UI.WebControls.Label ciudad;
         
         /// <summary>
-        /// contenido control.
+        /// ciudadBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder contenido;
+        protected global::System.Web.UI.WebControls.TextBox ciudadBox;
         
         /// <summary>
-        /// Menu control.
+        /// numEmp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu;
+        protected global::System.Web.UI.WebControls.Label numEmp;
         
         /// <summary>
-        /// SiteMapDataSource1 control.
+        /// numEmpBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource1;
+        protected global::System.Web.UI.WebControls.TextBox numEmpBox;
         
         /// <summary>
-        /// SiteMapPath1 control.
+        /// tipo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapPath SiteMapPath1;
+        protected global::System.Web.UI.WebControls.Label tipo;
+        
+        /// <summary>
+        /// tipoLista control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList tipoLista;
+        
+        /// <summary>
+        /// new control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button @new;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }

@@ -6,6 +6,7 @@ using appGestion.DAL;
 using System.Data;
 using System.Data.Odbc;
 
+
 namespace appGestion.BBL
 {
     public class Empresas
@@ -74,13 +75,13 @@ namespace appGestion.BBL
 
         //Métodos
 
-        public Empresas(string vcif, string vnombre, string vciudad, int vnEmp, string vtipo) 
+        public Empresas(string ccif, string cnombre, string cciudad, int cnEmp, string ctipo) 
         {
-            this.cif = vcif;
-            this.nombre = vnombre;
-            this.ciudad = vciudad;
-            this.nEmp = vnEmp;
-            this.tipo = vtipo;
+            this.cif = ccif;
+            this.nombre = cnombre;
+            this.ciudad = cciudad;
+            this.nEmp = cnEmp;
+            this.tipo = ctipo;
         }
         public static DataTable listarEmpresas(string query)
         {
@@ -88,6 +89,22 @@ namespace appGestion.BBL
             bd.abrirConexion();
             return bd.executeReader(query);
         }
-
+        public int NuevaEmpresa()
+        {
+            
+                string query = "insert into empresas values ('" + this.cif + "', '" + this.nombre + "', '" + this.ciudad + "', " + this.nEmp + ", '" + this.tipo + "');";
+                BaseDatos bd = new BaseDatos();
+                bd.abrirConexion();
+                int control = bd.executeNonQuery(query);
+                bd.cerrarConexion();
+                if (control == 1)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+        }
     }
 }

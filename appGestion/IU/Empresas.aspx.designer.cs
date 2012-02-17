@@ -10,87 +10,69 @@
 namespace appGestion.IU {
     
     
-    public partial class appGesion {
+    public partial class WebForm2 {
         
         /// <summary>
-        /// formMaster control.
+        /// empresas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formMaster;
+        protected global::System.Web.UI.WebControls.GridView empresas;
         
         /// <summary>
-        /// nomUsu control.
+        /// empresasSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label nomUsu;
+        protected global::System.Web.UI.WebControls.SqlDataSource empresasSource;
         
         /// <summary>
-        /// fecha control.
+        /// detallesEmpresa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label fecha;
+        protected global::System.Web.UI.WebControls.DetailsView detallesEmpresa;
         
         /// <summary>
-        /// salir control.
+        /// nombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button salir;
+        protected global::System.Web.UI.WebControls.Label nombre;
         
         /// <summary>
-        /// Menu1 control.
+        /// detallesEmpresaSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu1;
+        protected global::System.Web.UI.WebControls.SqlDataSource detallesEmpresaSource;
         
         /// <summary>
-        /// contenido control.
+        /// detallesOferta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder contenido;
+        protected global::System.Web.UI.WebControls.DetailsView detallesOferta;
         
         /// <summary>
-        /// Menu control.
+        /// detallesOfertaSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu;
-        
-        /// <summary>
-        /// SiteMapDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource1;
-        
-        /// <summary>
-        /// SiteMapPath1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapPath SiteMapPath1;
+        protected global::System.Web.UI.WebControls.SqlDataSource detallesOfertaSource;
     }
 }

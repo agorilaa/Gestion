@@ -56,6 +56,10 @@
     <Content Include="IU\css\text.css" />
     <Content Include="IU\js\javascript.js" />
     <Content Include="index.aspx" />
+    <Content Include="IU\Empresas.aspx" />
+    <Content Include="IU\NuevaEmpresa.aspx" />
+    <Content Include="IU\Ofertas.aspx" />
+    <Content Include="IU\Buscar.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -92,6 +96,34 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="IU\Empresas.aspx.cs">
+      <DependentUpon>Empresas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IU\Empresas.aspx.designer.cs">
+      <DependentUpon>Empresas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IU\NuevaEmpresa.aspx.cs">
+      <DependentUpon>NuevaEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IU\NuevaEmpresa.aspx.designer.cs">
+      <DependentUpon>NuevaEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IU\Ofertas.aspx.cs">
+      <DependentUpon>Ofertas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IU\Ofertas.aspx.designer.cs">
+      <DependentUpon>Ofertas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IU\Buscar.aspx.cs">
+      <DependentUpon>Buscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IU\Buscar.aspx.designer.cs">
+      <DependentUpon>Buscar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +131,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="IU\appGesion.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

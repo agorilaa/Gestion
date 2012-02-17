@@ -5,6 +5,7 @@ using System.Web;
 using System.Data;
 using System.Data.Odbc;
 
+
 namespace appGestion.DAL
 {
     public class BaseDatos
@@ -74,9 +75,18 @@ namespace appGestion.DAL
         }
 
 
-        public void queryBdAdapter()
-        { 
-            
+        public int executeNonQuery(string query)
+        {
+            OdbcCommand comand = new OdbcCommand(query, conex);
+            try
+            {
+                comand.ExecuteNonQuery();
+                return 1;
+            }
+            catch (OdbcException e)
+            {
+                return 0;
+            }
         }
 
         public void cerrarConexion()

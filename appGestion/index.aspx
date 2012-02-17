@@ -12,7 +12,7 @@
             <asp:Parameter Name="nombre" Type="String"/>
             <asp:Parameter Name="ciudad" Type="String"/>
             <asp:Parameter Name="nEmp" Type="String"/>
-            <asp:Parameter Name="Tipo" Type="String"  />
+            <asp:Parameter Name="tipo" Type="String" />
         </UpdateParameters>
  
     </asp:SqlDataSource>
@@ -53,9 +53,4 @@
         <PagerSettings PageButtonCount="3" />
     </asp:GridView>
 
-    <asp:DropDownList ID="tipo" runat="server" >
-                        <asp:ListItem Text="Potenciales" Value="p"></asp:ListItem>
-                        <asp:ListItem Text="Firmes" Value="f"></asp:ListItem>
-                    </asp:DropDownList>
-   
     </asp:Content>

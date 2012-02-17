@@ -49,3 +49,6 @@ a:visited{
 aside li{
 	border: 2px solid;
 }
+#salir{
+    float:right;    
+}

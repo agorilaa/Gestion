@@ -13,5 +13,20 @@ namespace appGestion.IU
         {
             fecha.Text = DateTime.Today.ToString("d");
         }
+        public static System.Web.UI.Control FindControl(string controlID, System.Web.UI.Control control)
+        {
+            if (control.ID == controlID)
+                return control;
+            else
+            {
+                foreach (System.Web.UI.Control ctrl in control.Controls)
+                {
+                    System.Web.UI.Control searchedControl = FindControl(controlID, ctrl);
+                    if (searchedControl != null)
+                        return searchedControl;
+                }
+                return null;
+            }
+        }
     }
 }

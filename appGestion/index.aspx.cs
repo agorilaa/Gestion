@@ -16,17 +16,6 @@ namespace appGestion.IU
         {
             
         }
-        protected internal void gvDataRowUpdating(object sender, GridViewUpdateEventArgs e)
-        {
-            foreach (GridViewRow gr in this.GridView1.Rows)
-            {
-                DropDownList tipo = (DropDownList)gr.FindControl("tipo");
-                if (tipo != null)
-                {
-                    e.NewValues["Tipo"] = tipo.SelectedValue;
-                }
-            }
-
-        }
+        
     }
 }
