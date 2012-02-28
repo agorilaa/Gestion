@@ -52,3 +52,7 @@ aside li{
 #salir{
     float:right;    
 }
+#nEmpresa p
+{
+    clear:left;
+}

@@ -55,11 +55,12 @@
     <Content Include="IU\css\styles.css" />
     <Content Include="IU\css\text.css" />
     <Content Include="IU\js\javascript.js" />
-    <Content Include="index.aspx" />
+    <Content Include="IU\Index.aspx" />
     <Content Include="IU\Empresas.aspx" />
     <Content Include="IU\NuevaEmpresa.aspx" />
     <Content Include="IU\Ofertas.aspx" />
     <Content Include="IU\Buscar.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -89,12 +90,12 @@
     <Compile Include="IU\appGesion.Master.designer.cs">
       <DependentUpon>appGesion.Master</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="IU\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="IU\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="IU\Empresas.aspx.cs">
       <DependentUpon>Empresas.aspx</DependentUpon>
@@ -123,6 +124,13 @@
     </Compile>
     <Compile Include="IU\Buscar.aspx.designer.cs">
       <DependentUpon>Buscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -31,6 +31,24 @@ namespace appGestion.IU {
         protected global::System.Web.UI.WebControls.TextBox cifBox;
         
         /// <summary>
+        /// validaCifBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator validaCifBox;
+        
+        /// <summary>
+        /// validaCifBoxReq control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validaCifBoxReq;
+        
+        /// <summary>
         /// nomEmp control.
         /// </summary>
         /// <remarks>
@@ -47,6 +65,15 @@ namespace appGestion.IU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox nomEmpBox;
+        
+        /// <summary>
+        /// validaNomEmpReq control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validaNomEmpReq;
         
         /// <summary>
         /// ciudad control.

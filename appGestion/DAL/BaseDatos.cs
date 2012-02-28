@@ -89,6 +89,30 @@ namespace appGestion.DAL
             }
         }
 
+        public string executeQuery(string query)
+        {
+            OdbcCommand comand = new OdbcCommand(query, conex);
+            try
+            {
+                OdbcDataReader dataReader = comand.ExecuteReader();
+                bool filas = dataReader.HasRows;
+                if (filas == true)
+                {
+                    dataReader.Read();
+                    string usu = (string)dataReader["nombre"];
+                    return usu;
+                }
+                else
+                {
+                    return "0";
+                }
+            }
+            catch (OdbcException e)
+            {
+                return "0";
+            }
+        }
+
         public void cerrarConexion()
         {
             this.conex.Close();

@@ -1,11 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/IU/appGesion.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="appGestion.IU.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/IU/appGesion.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="appGestion.IU.WebForm1" %>
 <asp:Content ID="indexContenido" ContentPlaceHolderID="contenido" runat="server">
     
+    <asp:Label ID="prueba" runat="server" Text="Label"></asp:Label>
+
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:proyectoConnection %>" 
         ProviderName="<%$ ConnectionStrings:proyectoConnection.ProviderName %>" 
         DataSourceMode="DataSet"
-        SelectCommand="select cif, nombre, ciudad, nEmp, tipo from empresas;"
         UpdateCommand="UPDATE empresas SET nombre=?, ciudad=?, nEmp=?, tipo=? WHERE cif=?;">
         
         <UpdateParameters>

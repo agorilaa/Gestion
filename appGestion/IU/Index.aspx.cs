@@ -14,7 +14,7 @@ namespace appGestion.IU
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            SqlDataSource1.SelectCommand = "select e.cif, e.nombre, e.ciudad, e.nEmp, e.tipo from comerciales c join comemp com on c.dni=com.dni join empresas e on com.cif=e.cif where c.dni='" + (string)Session["dni"] + "';";
         }
         
     }

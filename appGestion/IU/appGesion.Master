@@ -21,21 +21,27 @@
 <body>
     <form id="formMaster" runat="server">
     <div class="wrap container_12">
+    
 	<header class="grid_12">
 		<h1 class="grid_9">Nombre APP</h1>
         <asp:Label ID="nomUsu" runat="server" Text="Nombre de usuario" CssClass="grid_2"></asp:Label>
 	    <asp:Label ID="fecha" runat="server" CssClass="grid_2"></asp:Label>
-        <asp:Button ID="salir" runat="server" Text="Salir" class="grid_1"></asp:Button>
+        <asp:Button ID="salir" runat="server" Text="Salir" class="grid_1" 
+            onclick="salir_Click" CausesValidation="False"></asp:Button>
         <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" 
             Orientation="Horizontal" CssClass="grid_12">
         </asp:Menu>
 	</header>
+    
+
 	<div class="main grid_12">
         <div class="content grid_9 alpha">
             <asp:ContentPlaceHolder ID="contenido" runat="server">
                 
             </asp:ContentPlaceHolder>
         </div>
+
+        
         <aside class="grid_3 omega">
 		    <div id="menu">
                 <asp:Menu ID="Menu" runat="server" DataSourceID="SiteMapDataSource1"></asp:Menu>
@@ -43,6 +49,7 @@
                     ShowStartingNode="False" />
             </div>
 	    </aside>
+        
 	</div>
 	
 	<footer class="grid_12">

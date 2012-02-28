@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using appGestion.DAL;
 
 namespace appGestion.BBL
 {
@@ -13,6 +14,7 @@ namespace appGestion.BBL
         private DateTime fecha;
         private string dir;
         private string dnij;
+        private string password;
 
         public string Dni 
         {
@@ -90,6 +92,27 @@ namespace appGestion.BBL
             this.fecha = vfecha;
             this.dir = vdir;
             this.dnij = vdnij;
+        }
+        public Comerciales(string vdni, string vpassw)
+        {
+            this.dni = vdni;
+            this.password = vpassw;
+        }
+        public string buscarComerciales(string vdni, string vpassw)
+        {
+            string query = "select nombre from comerciales where dni='"+vdni+"' and password ='"+vpassw+"';";
+            BaseDatos bd = new BaseDatos();
+            bd.abrirConexion();
+            string usu = bd.executeQuery(query);
+            bd.cerrarConexion();
+            if (usu != "0")
+            {
+                return usu;
+            }
+            else
+            {
+                return "0";
+            }
         }
     }
 }

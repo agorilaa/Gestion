@@ -18,10 +18,9 @@ namespace appGestion.IU
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-          
             int numeroEmp = int.Parse(numEmpBox.Text);
             Empresas emp = new Empresas(cifBox.Text, nomEmpBox.Text, ciudadBox.Text,numeroEmp,tipoLista.SelectedValue);
-            int control = emp.NuevaEmpresa();
+            int control = emp.NuevaEmpresa((string)Session["dni"]);
             if (control == 0)
             {
                 Label1.Text = "Error de pk, no se puede insertar";
