@@ -13,12 +13,13 @@ namespace appGestion.IU
         {
             if(Request.QueryString.Get("cif") != null)
             {
-                detallesEmpresaSource.SelectCommand = "select coe.cif, coe.codO, coe.fecha, coe.coste, coe.dni from comoferemp coe join empresas emp on coe.cif=emp.cif where coe.cif='" + Request.QueryString.Get("cif") + "';";
+                detallesEmpresaSource.SelectCommand = "select coe.cif, coe.codO, coe.fecha, o.coste, coe.dni from ofertas o join hace coe on o.codO=coe.codO join empresas emp on coe.cif=emp.cif where coe.cif='" + Request.QueryString.Get("cif") + "';";
+                detallesempresa.EmptyDataText = "No se han encontrado resultados";
             }
             if (Request.QueryString.Get("codO") != null)
             {
-                detallesEmpresaSource.SelectCommand = "select coe.cif, coe.codO, coe.fecha, coe.coste, coe.dni from comoferemp coe join empresas emp on coe.cif=emp.cif where coe.cif='" + Request.QueryString.Get("cif") + "';";
-                detallesOfertaSource.SelectCommand = "select codO, nombre, tipo from ofertas where codO=" + Request.QueryString.Get("codO") + ";";
+                detallesEmpresaSource.SelectCommand = "select coe.cif, coe.codO, coe.fecha, o.coste, coe.dni from ofertas o join hace coe on o.codO=coe.codO join empresas emp on coe.cif=emp.cif where coe.cif='" + Request.QueryString.Get("cif") + "';";
+                detallesOfertaSource.SelectCommand = "select codO, nombreO, tipoO from ofertas where codO=" + Request.QueryString.Get("codO") + ";";
             }
         }
         protected void cargarDatos(object sender, EventArgs e)

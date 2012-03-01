@@ -23,7 +23,7 @@ namespace appGestion.IU
             int control = emp.NuevaEmpresa((string)Session["dni"]);
             if (control == 0)
             {
-                Label1.Text = "Error de pk, no se puede insertar";
+                Label1.Text = "Error, no se puede insertar";
             }
             else
             {

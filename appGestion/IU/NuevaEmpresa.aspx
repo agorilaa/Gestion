@@ -54,12 +54,12 @@
 
         <p class="grid_4"><asp:Label ID="tipo" runat="server" Text="Tipo" CssClass="grid_1"></asp:Label>
         <asp:DropDownList ID="tipoLista" runat="server" CssClass="grid_2">
-            <asp:ListItem Text="Con ofertas" Value="f"></asp:ListItem>
-            <asp:ListItem Text="Sin ofertas" Value="p"></asp:ListItem>
+            <asp:ListItem Text="Firme" Value="f"></asp:ListItem>
+            <asp:ListItem Text="Potencial" Value="p"></asp:ListItem>
         </asp:DropDownList>
         </p><br />
 
         <p class="grid_4"><asp:Button ID="new" runat="server" Text="Añadir" onclick="Button1_Click"  CssClass="grid_1"/>
-        <asp:Label ID="Label1" runat="server" Text="Label" CssClass="grid_2"></asp:Label></p>
+        <asp:Label ID="Label1" runat="server" Text="" CssClass="grid_2"></asp:Label></p>
     </div>
 </asp:Content>

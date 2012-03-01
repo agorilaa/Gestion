@@ -96,7 +96,7 @@ namespace appGestion.BBL
                 BaseDatos bd = new BaseDatos();
                 bd.abrirConexion();
                 int control = bd.executeNonQuery(query);
-                query = "insert into comemp values ('"+this.cif+"', '"+dni+"');";
+                query = "insert into asigna values ('"+this.cif+"', '"+dni+"');";
                 control = bd.executeNonQuery(query);
                 bd.cerrarConexion();
                 if (control == 1)

@@ -72,7 +72,7 @@
   <ItemGroup>
     <Compile Include="BBL\Comemp.cs" />
     <Compile Include="BBL\Comerciales.cs" />
-    <Compile Include="BBL\Comoferemp.cs" />
+    <Compile Include="BBL\Hace.cs" />
     <Compile Include="BBL\Empresas.cs" />
     <Compile Include="BBL\Facser.cs" />
     <Compile Include="BBL\Facturas.cs" />

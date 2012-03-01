@@ -31,13 +31,13 @@ namespace appGestion.IU {
         protected global::System.Web.UI.WebControls.SqlDataSource empresasSource;
         
         /// <summary>
-        /// detallesEmpresa control.
+        /// detallesempresa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DetailsView detallesEmpresa;
+        protected global::System.Web.UI.WebControls.GridView detallesempresa;
         
         /// <summary>
         /// nombre control.

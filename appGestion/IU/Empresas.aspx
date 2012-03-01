@@ -4,7 +4,7 @@
         AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="cif" 
         DataSourceID="empresasSource" PageSize="5">
         <Columns>
-            <asp:CommandField ShowEditButton="True" />
+            <asp:CommandField ShowEditButton="False" />
             <asp:HyperLinkField DataNavigateUrlFields="cif" 
                 DataNavigateUrlFormatString="~/IU/Empresas.aspx?cif={0}" DataTextField="cif" HeaderText="CIF" />
             <asp:BoundField DataField="nombre" HeaderText="nombre" 
@@ -14,7 +14,7 @@
             <asp:BoundField DataField="nEmp" HeaderText="nEmp" 
                 SortExpression="nEmp" />
             <asp:BoundField DataField="tipo" HeaderText="tipo" SortExpression="tipo" />
-            <asp:CommandField ShowDeleteButton="True" />
+            <asp:CommandField ShowDeleteButton="False" />
         </Columns>
         <SelectedRowStyle BackColor="#339966" />
     </asp:GridView>
@@ -26,21 +26,22 @@
         UpdateCommand="update empresas set nombre=?, ciudad=?, nEmp=?, tipo=? where cif=?;">
     </asp:SqlDataSource>
     
-    <asp:DetailsView ID="detallesEmpresa" runat="server" Height="50px" Width="125px" 
-        AutoGenerateRows="False" DataKeyNames="codO,dni" DataSourceID="detallesEmpresaSource">
-        <Fields>
+    <asp:GridView ID="detallesempresa" runat="server" AllowPaging="True" 
+        AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="cif" 
+        DataSourceID="detallesEmpresaSource" PageSize="5">
+    
+        <Columns>
             <asp:BoundField DataField="cif" HeaderText="cif" SortExpression="cif" />
-            <asp:BoundField DataField="codO" HeaderText="codO" ReadOnly="True" 
-                SortExpression="codO" />
+            <asp:HyperLinkField DataNavigateUrlFields="codO,cif" 
+                DataNavigateUrlFormatString="~/IU/Empresas.aspx?codO={0}&cif={1}" DataTextField="codO" HeaderText="Oferta" />
             <asp:BoundField DataField="fecha" HeaderText="fecha" SortExpression="fecha" HtmlEncode="False" DataFormatString="{00:M/dd/yyyy}" />
             <asp:BoundField DataField="coste" HeaderText="coste" SortExpression="coste" />
             <asp:BoundField DataField="dni" HeaderText="dni" ReadOnly="True" 
                 SortExpression="dni" />
-            <asp:HyperLinkField HeaderText="ofertas" 
-                 DataNavigateUrlFormatString="~/IU/Empresas.aspx?codO={0}&cif={1}" 
-                DataTextField="codO"  DataNavigateUrlFields="codO,cif" />
-        </Fields>
-    </asp:DetailsView>
+        </Columns>
+
+    </asp:GridView>
+
     <asp:Label ID="nombre" runat="server" Text=""></asp:Label>
     <asp:SqlDataSource ID="detallesEmpresaSource" runat="server" 
         ConnectionString="<%$ ConnectionStrings:proyectoConnection %>" 
@@ -52,9 +53,9 @@
         <Fields>
             <asp:BoundField DataField="codO" HeaderText="codO" InsertVisible="False" 
                 SortExpression="codO" />
-            <asp:BoundField DataField="nombre" HeaderText="nombre" 
+            <asp:BoundField DataField="nombreO" HeaderText="nombre" 
                 SortExpression="nombre" />
-            <asp:BoundField DataField="tipo" HeaderText="tipo" SortExpression="tipo" />
+            <asp:BoundField DataField="tipoO" HeaderText="tipo" SortExpression="tipo" />
         </Fields>
     </asp:DetailsView>
 

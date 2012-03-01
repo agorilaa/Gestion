@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using appGestion.DAL;
 
 namespace appGestion.BBL
 {
-    public class Comoferemp
+    public class Hace
     {
         private string dni;
         private int codO;
         private string cif;
-        private DateTime fecha;
+        private string fecha;
 
         public string Dni
         {
@@ -45,7 +46,7 @@ namespace appGestion.BBL
                 this.cif = value;
             }
         }
-        public DateTime Fecha
+        public string Fecha
         {
             get
             {
@@ -57,12 +58,29 @@ namespace appGestion.BBL
             }
         }
         //Métodos
-        public Comoferemp(string vdni, int vcodO, string vcif, DateTime vfecha)
+        public Hace(string vdni, int vcodO, string vcif, string vfecha)
         {
             this.dni = vdni;
             this.codO = vcodO;
             this.cif = vcif;
             this.fecha = vfecha;
+        }
+
+        public int nuevo()
+        {
+            string query = "insert into hace values ('"+this.dni+"', "+this.codO+", '"+this.cif+"', '"+this.fecha+"');";
+            BaseDatos bd = new BaseDatos();
+            bd.abrirConexion();
+            int control = bd.executeNonQuery(query);
+            bd.cerrarConexion();
+            if (control == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }

@@ -11,12 +11,13 @@ namespace appGestion.IU
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            prueba.Text = "select e.cif, e.nombre, e.ciudad, e.nEmp, e.tipo, o.CodO, o.nombreO, o.descr, o.tipoO, o.ambito, o.estado, o.coste from comoferemp coe, empresas e, ofertas o where coe.cif=e.cif and coe.codO=o.codO and coe.dni='" + (string)Session["dni"] + "' and e.cif='%" + cifBox + " ;"; //%' and e.nombre='%" + nomEmpBox.Text + "%' and e.ciudad='%" + ciudadBox.Text + "%' and e.nEmp=" + int.Parse(numEmpBox.Text) + " and e.tipo='" + tipoE.SelectedValue + "' and o.CodO=" + int.Parse(tbCodigo.Text) + " and o.nombreO='%" + tbNombre.Text + "%' and o.descr='%" + tbDesc.Text + "%' and o.tipo='%" + tbTipo.Text + "%' and o.ambito='" + ambitoList.SelectedValue + "' and o.estado='" + estadoList.SelectedValue + "' and o.coste= "+int.Parse(tbCoste.Text) +";";
+            buscarRes.EmptyDataText = "";
         }
 
         protected void buscar_Click(object sender, EventArgs e)
         {
-            buscarSql.SelectCommand = "select e.cif, e.nombre, e.ciudad, e.nEmp, e.tipo, o.CodO, o.nombreO, o.descr, o.tipoO, o.ambito, o.estado, o.coste from comoferemp coe, empresas e, ofertas o where coe.cif=e.cif and coe.codO=o.codO and coe.dni='" + (string)Session["dni"] + "' and e.cif='%"+cifBox+"%' and e.nombre='%"+nomEmpBox.Text+"%' and e.ciudad='%"+ciudadBox.Text+"%' and e.nEmp="+int.Parse(numEmpBox.Text)+" and e.tipo='"+tipoE.SelectedValue+"' and o.CodO="+int.Parse(tbCodigo.Text)+" and o.nombreO='%"+tbNombre.Text+"%' and o.descr='%"+tbDesc.Text+"%' and o.tipo='%"+tbTipo.Text+"%' and o.ambito='"+ambitoList.SelectedValue+"' and o.estado='"+estadoList.SelectedValue+"' and o.coste="+int.Parse(tbCoste.Text)+"";
+           buscarSql.SelectCommand = "select e.cif, e.nombre, e.ciudad, e.nEmp, e.tipo, o.CodO, o.nombreO, o.descr, o.tipoO from hace coe, empresas e, ofertas o where coe.cif=e.cif and coe.codO=o.codO and coe.dni='" + (string)Session["dni"] + "' and e.cif like '%" + cifBox.Text + "%' and e.nombre like '%" + nomEmpBox.Text + "%' and e.ciudad like '%" + ciudadBox.Text + "%' and e.nEmp like '%" + numEmpBox.Text + "%' and e.tipo like '" + tipoE.SelectedValue + "' and o.CodO like '%" + tbCodigo.Text + "%' and o.nombreO like '%" + tbNombre.Text + "%' and o.descr like '%" + tbDesc.Text + "%' and o.tipoO like '%" + tbTipo.Text + "%' and o.ambito like '" + ambitoList.SelectedValue + "' and o.estado like '" + estadoList.SelectedValue + "' and o.coste like '%" + tbCoste.Text + "%';";
+           buscarRes.EmptyDataText = "No se han encontrado resultados";
         }
     }
 }

@@ -56,3 +56,29 @@ aside li{
 {
     clear:left;
 }
+#gridview
+{
+    background-color: #6EAACF;  
+}
+.celda
+{
+    Text-align:center;
+    background-color: #99CCFF;
+    padding: 2px 10px 2px 10px;
+}
+.celda a:hover
+{
+    color:#FF803E;
+    font-weight:normal;   
+}
+.celdaHeader
+{
+    Text-align:center;
+    background-color: #CCEEFF;
+    padding: 2px 10px 2px 10px
+}
+.celdaHeader a:hover
+{
+    font-weight:normal;   
+    color: #FF803E;
+}
